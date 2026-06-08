@@ -1,0 +1,37 @@
+{
+  "name": "StreamArena — Live TV",
+  "short_name": "StreamArena",
+  "description": "Watch 200+ live TV channels including World Cup 2026",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0f",
+  "theme_color": "#e50914",
+  "orientation": "any",
+  "categories": ["entertainment", "sports"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "World Cup 2026",
+      "url": "/category/World%20Cup",
+      "description": "Watch World Cup 2026 live"
+    },
+    {
+      "name": "Sports",
+      "url": "/category/Sports",
+      "description": "Watch live sports channels"
+    }
+  ]
+}
