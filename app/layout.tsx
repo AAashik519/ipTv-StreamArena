@@ -42,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geist.variable}>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-5197585000953461" />
         <link rel="icon" href="/icons/icon-192.png" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
