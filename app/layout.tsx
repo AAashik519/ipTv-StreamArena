@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     description: "Watch 200+ live channels including World Cup 2026",
     type: "website",
   },
+  other: {
+    "google-adsense-account": "ca-pub-5197585000953461",
+  },
 };
 
 export const viewport: Viewport = {
