@@ -13,6 +13,8 @@ import CategoryCard from "@/components/ui/CategoryCard";
 import SectionHeader from "@/components/ui/SectionHeader";
 import RecentlyWatched from "@/components/RecentlyWatched";
 import { SkeletonGrid } from "@/components/ui/SkeletonCard";
+import AdBanner from "@/components/ads/AdBanner";
+import { AD_SLOTS } from "@/lib/ads";
 
 export const revalidate = 3600;
 
@@ -60,6 +62,13 @@ export default function HomePage() {
         </Suspense>
       </section>
 
+      {/* Ad — between Featured and Sports */}
+      <AdBanner
+        adSlot={AD_SLOTS.HOME_BANNER}
+        adFormat="auto"
+        className="mb-12"
+      />
+
       {/* Sports */}
       {sportsChannels.length > 0 && (
         <section className="mb-12">
@@ -87,6 +96,13 @@ export default function HomePage() {
           </Suspense>
         </section>
       )}
+
+      {/* Ad — between Bangla and News */}
+      <AdBanner
+        adSlot={AD_SLOTS.HOME_IN_FEED}
+        adFormat="fluid"
+        className="mb-12"
+      />
 
       {/* News */}
       {newsChannels.length > 0 && (

@@ -7,6 +7,8 @@ import Image from "next/image";
 import { ChevronRight, Home, Play, ArrowLeft, ArrowRight } from "lucide-react";
 import { Channel } from "@/lib/types";
 import { parseStreamUrls, getCategoryIcon, addRecentlyWatched } from "@/lib/utils";
+import AdBanner from "@/components/ads/AdBanner";
+import { AD_SLOTS } from "@/lib/ads";
 
 const VideoPlayer = dynamic(() => import("@/components/player/VideoPlayer"), {
   ssr: false,
@@ -92,6 +94,13 @@ export default function WatchClient({ channel, related, prevChannel, nextChannel
             </div>
           </div>
 
+          {/* Ad — below player */}
+          <AdBanner
+            adSlot={AD_SLOTS.WATCH_BELOW_PLAYER}
+            adFormat="auto"
+            className="mt-6"
+          />
+
           {/* Prev / Next navigation */}
           <div className="flex items-center gap-3 mt-4">
             {prevChannel ? (
@@ -128,6 +137,13 @@ export default function WatchClient({ channel, related, prevChannel, nextChannel
 
         {/* Sidebar: Related channels */}
         <div className="xl:col-span-1">
+          {/* Ad — sidebar top */}
+          <AdBanner
+            adSlot={AD_SLOTS.WATCH_SIDEBAR}
+            adFormat="auto"
+            className="mb-6"
+          />
+
           <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
             {getCategoryIcon(channel.category)}
             More {channel.category} Channels
