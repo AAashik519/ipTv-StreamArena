@@ -1,0 +1,21 @@
+---
+description: Never auto git push — always ask user first
+alwaysApply: true
+---
+
+# Git Push Policy
+
+NEVER run `git push` automatically.
+
+Always ask the user before pushing:
+> "Push করব? (Should I push to GitHub?)"
+
+Only run `git commit` and `git push` when the user **explicitly** says:
+- "push করো"
+- "push koro"
+- "push it"
+- "deploy করো"
+- or similar clear instruction
+
+`git add` and `git commit` is allowed without asking.
+`git push` requires explicit user approval every time.
